@@ -1,33 +1,5 @@
 /* ===== Fonts ===== */
 @font-face {
-  font-family: "Thmanyah Sans";
-  src: url("../fonts/ThmanyahSans-Regular.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Thmanyah Sans";
-  src: url("../fonts/ThmanyahSans-Medium.otf") format("opentype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Thmanyah Sans";
-  src: url("../fonts/ThmanyahSans-Bold.otf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Thmanyah Sans";
-  src: url("../fonts/ThmanyahSans-Black.otf") format("opentype");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
   font-family: "Thmanyah Serif Display";
   src: url("../fonts/ThmanyahSerifDisplay-Regular.otf") format("opentype");
   font-weight: 400;
@@ -107,7 +79,7 @@ html {
 body {
   background: var(--bg);
   color: var(--fg);
-  font-family: "Thmanyah Sans", sans-serif;
+  font-family: "Thmanyah Serif Display", serif;
   font-weight: 400;
   line-height: 1.75;
   overflow-x: hidden;
