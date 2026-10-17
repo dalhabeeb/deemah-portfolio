@@ -1,13 +1,39 @@
 /* ===== Fonts ===== */
 @font-face {
-  font-family: "Handcrafts";
-  src: url("../fonts/HandcraftsFont-SemiBold.otf") format("opentype");
-  font-weight: 400 800;
+  font-family: "Thmanyah Sans";
+  src: url("../fonts/ThmanyahSans-Medium.otf") format("opentype");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap");
+@font-face {
+  font-family: "Thmanyah Sans";
+  src: url("../fonts/ThmanyahSans-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Thmanyah Sans";
+  src: url("../fonts/ThmanyahSans-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Thmanyah Serif Display";
+  src: url("../fonts/ThmanyahSerifDisplay-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Thmanyah Serif Display";
+  src: url("../fonts/ThmanyahSerifDisplay-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* ===== Reset ===== */
 * {
@@ -46,7 +72,8 @@ html {
 body {
   background: var(--bg);
   color: var(--fg);
-  font-family: "IBM Plex Sans Arabic", "Handcrafts", sans-serif;
+  font-family: "Thmanyah Sans", sans-serif;
+  font-weight: 500;
   line-height: 1.75;
   overflow-x: hidden;
   cursor: none;
@@ -58,7 +85,7 @@ body {
 }
 
 .display {
-  font-family: "Handcrafts", "IBM Plex Sans Arabic", sans-serif;
+  font-family: "Thmanyah Serif Display", serif;
 }
 
 /* grain texture */
@@ -190,7 +217,7 @@ img, video, iframe { max-width: 100%; display: block; }
   height: 84px;
 }
 .brand {
-  font-family: "Handcrafts", sans-serif;
+  font-family: "Thmanyah Serif Display", serif;
   font-size: 1.6rem;
   display: inline-flex;
   align-items: center;
@@ -252,7 +279,7 @@ img, video, iframe { max-width: 100%; display: block; }
 }
 
 .hero h1 {
-  font-family: "Handcrafts", sans-serif;
+  font-family: "Thmanyah Serif Display", serif;
   font-size: clamp(2.4rem, 7.2vw, 5.6rem);
   line-height: 1.18;
   letter-spacing: -0.01em;
@@ -276,7 +303,6 @@ img, video, iframe { max-width: 100%; display: block; }
   font-size: clamp(1.02rem, 1.6vw, 1.2rem);
   color: var(--fg-dim);
   max-width: 700px;
-  font-weight: 300;
   position: relative;
   z-index: 1;
 }
@@ -338,7 +364,7 @@ img, video, iframe { max-width: 100%; display: block; }
   overflow: hidden;
 }
 .closing h2 {
-  font-family: "Handcrafts", sans-serif;
+  font-family: "Thmanyah Serif Display", serif;
   font-size: clamp(1.9rem, 5vw, 3.2rem);
   margin-bottom: 40px;
   position: relative;
@@ -406,7 +432,7 @@ footer.site-footer {
   position: relative;
 }
 .page-header h1 {
-  font-family: "Handcrafts", sans-serif;
+  font-family: "Thmanyah Serif Display", serif;
   font-size: clamp(2.2rem, 6vw, 4.2rem);
   line-height: 1.15;
   position: relative;
@@ -417,7 +443,6 @@ footer.site-footer {
   margin-top: 20px;
   color: var(--fg-dim);
   max-width: 640px;
-  font-weight: 300;
   position: relative;
   z-index: 1;
 }
@@ -440,7 +465,7 @@ footer.site-footer {
   position: absolute;
   top: -64px;
   inset-inline-start: -10px;
-  font-family: "Handcrafts", sans-serif;
+  font-family: "Thmanyah Serif Display", serif;
   font-size: clamp(4.5rem, 11vw, 9rem);
   line-height: 1;
   color: transparent;
@@ -458,7 +483,7 @@ footer.site-footer {
 .project-body { position: relative; z-index: 1; }
 
 .project-title {
-  font-family: "Handcrafts", sans-serif;
+  font-family: "Thmanyah Serif Display", serif;
   font-size: clamp(1.5rem, 3vw, 2.1rem);
   margin-bottom: 20px;
 }
@@ -467,7 +492,6 @@ footer.site-footer {
   color: var(--fg-dim);
   font-size: 1.02rem;
   max-width: 760px;
-  font-weight: 300;
   margin-bottom: 36px;
 }
 .project-desc + .project-desc { margin-top: -22px; }
