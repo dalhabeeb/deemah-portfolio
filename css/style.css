@@ -372,6 +372,7 @@ img, video, iframe { max-width: 100%; display: block; }
 }
 .contact-pill:nth-child(1) { transform: rotate(-2deg); }
 .contact-pill:nth-child(2) { transform: rotate(2deg); }
+.contact-pill:nth-child(3) { transform: rotate(-1.5deg); }
 .contact-pill:hover {
   background: var(--fg);
   color: var(--bg);
