@@ -50,20 +50,21 @@
 }
 
 :root {
-  --bg: #1b1b1b;
-  --bg-elevated: rgba(32, 33, 38, 0.52);
-  --bg-elevated-solid: #212126;
-  --line: rgba(245, 240, 230, 0.10);
-  --line-strong: rgba(245, 240, 230, 0.20);
-  --fg: #f3efe6;
-  --fg-dim: #9c9488;
-  --fg-faint: #8c8375;
+  --bg: #070a12;
+  --bg-elevated: rgba(14, 18, 30, 0.55);
+  --bg-elevated-solid: #0d1119;
+  --line: rgba(234, 240, 255, 0.09);
+  --line-strong: rgba(234, 240, 255, 0.18);
+  --fg: #eaf0ff;
+  --fg-dim: #9aa6c0;
+  --fg-faint: #717ba0;
   --sirius: #cfe3ff;
-  --gold: #d8b98a;
+  --violet: #a99bff;
+  --sirius-ink: #070a12;
   --prism-1: rgba(207, 227, 255, 0.55);
-  --prism-2: rgba(216, 185, 138, 0.45);
-  --prism-3: rgba(255, 205, 225, 0.35);
-  --prism-4: rgba(190, 215, 255, 0.45);
+  --prism-2: rgba(169, 155, 255, 0.45);
+  --prism-3: rgba(255, 205, 225, 0.32);
+  --prism-4: rgba(255, 196, 150, 0.16);
   --max-w: 1180px;
   --ease: cubic-bezier(0.19, 1, 0.22, 1);
   --glass-blur: 16px;
@@ -74,8 +75,8 @@ html {
 }
 
 body {
-  background: #1b1b1b;
-  background: linear-gradient(180deg, #1c1c1d 0%, #16171c 55%, #101119 100%) fixed;
+  background: #070a12;
+  background: linear-gradient(180deg, #0b0f1c 0%, #070a12 55%, #05070d 100%) fixed;
   color: var(--fg);
   font-family: "Thmanyah Serif Display", serif;
   font-weight: 400;
@@ -102,7 +103,7 @@ body::after {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
 }
 
-/* nebula glow: a couple of soft blurred spots, never bright */
+/* nebula glow: soft blue-violet, never bright */
 body::before {
   content: "";
   position: fixed;
@@ -110,8 +111,8 @@ body::before {
   z-index: -1;
   background:
     radial-gradient(ellipse 820px 520px at 78% 8%, rgba(207, 227, 255, 0.05), transparent 60%),
-    radial-gradient(ellipse 700px 600px at 10% 85%, rgba(216, 185, 138, 0.04), transparent 62%),
-    radial-gradient(ellipse 140% 140% at 50% 50%, transparent 55%, rgba(0, 0, 0, 0.4) 100%);
+    radial-gradient(ellipse 700px 600px at 10% 85%, rgba(169, 155, 255, 0.045), transparent 62%),
+    radial-gradient(ellipse 140% 140% at 50% 50%, transparent 55%, rgba(0, 0, 0, 0.45) 100%);
   pointer-events: none;
 }
 
@@ -195,7 +196,7 @@ img, video, iframe { max-width: 100%; display: block; }
 .cursor-ring.is-hover {
   width: 56px;
   height: 56px;
-  border-color: rgba(216, 185, 138, 0.45);
+  border-color: rgba(169, 155, 255, 0.5);
   opacity: 1;
 }
 .cursor-ring.is-hover::before,
@@ -304,7 +305,7 @@ img, video, iframe { max-width: 100%; display: block; }
 }
 .nav-links a.active {
   color: var(--fg);
-  border-color: var(--gold);
+  border-color: var(--sirius);
 }
 
 /* ===== Glass surfaces (buttons, contact links, embed frames) ===== */
@@ -349,7 +350,7 @@ img, video, iframe { max-width: 100%; display: block; }
   font-weight: 400;
 }
 .hero h1 .line-2 .accent-word {
-  color: var(--gold);
+  color: var(--sirius);
 }
 
 .hero-sub {
@@ -381,9 +382,9 @@ img, video, iframe { max-width: 100%; display: block; }
   transition: border-color 0.35s var(--ease), background 0.35s var(--ease), color 0.35s var(--ease), transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
 }
 .btn-primary {
-  background: var(--gold);
-  color: #1b1b1b;
-  border-color: var(--gold);
+  background: var(--sirius);
+  color: var(--sirius-ink);
+  border-color: var(--sirius);
 }
 .btn-secondary {
   color: var(--fg);
@@ -419,7 +420,7 @@ img, video, iframe { max-width: 100%; display: block; }
   font-weight: 500;
 }
 .closing h2 .accent-word {
-  color: var(--gold);
+  color: var(--sirius);
 }
 
 .contact-row {
@@ -478,7 +479,7 @@ footer.site-footer {
   display: inline-block;
   font-size: 0.82rem;
   letter-spacing: 0.08em;
-  color: var(--gold);
+  color: var(--violet);
   margin-bottom: 22px;
   position: relative;
   z-index: 1;
@@ -490,7 +491,7 @@ footer.site-footer {
   position: relative;
   z-index: 1;
 }
-.page-header h1 .accent-word { color: var(--gold); }
+.page-header h1 .accent-word { color: var(--sirius); }
 .page-header p {
   margin-top: 24px;
   color: var(--fg-dim);
@@ -538,7 +539,7 @@ footer.site-footer {
   position: relative;
   z-index: 1;
   font-size: 0.95rem;
-  color: var(--gold);
+  color: var(--violet);
   font-weight: 500;
   letter-spacing: 0.02em;
   padding-top: 4px;
