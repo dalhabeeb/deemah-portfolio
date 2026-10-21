@@ -311,7 +311,7 @@ img, video, iframe { max-width: 100%; display: block; }
   margin-top: 10px;
 }
 .hero h1 .line-2 .line-2-dim {
-  color: var(--fg-dim);
+  color: rgba(126, 237, 229, 0.55);
 }
 
 .hero-sub {
