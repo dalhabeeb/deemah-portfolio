@@ -310,6 +310,9 @@ img, video, iframe { max-width: 100%; display: block; }
   font-size: clamp(1.5rem, 4vw, 2.6rem);
   margin-top: 10px;
 }
+.hero h1 .line-2 .line-2-dim {
+  color: var(--fg-dim);
+}
 
 .hero-sub {
   margin-top: 34px;
