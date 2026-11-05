@@ -24,27 +24,6 @@
     });
   }
 
-  /* ---- path stops light up as they're reached ---- */
-  var stops = document.querySelectorAll("[data-stop]");
-  if (stops.length) {
-    if (!("IntersectionObserver" in window) || reduced) {
-      stops.forEach(function (el) { el.classList.add("in-view"); });
-    } else {
-      var stopObserver = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("in-view");
-              stopObserver.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.35, rootMargin: "0px 0px -15% 0px" }
-      );
-      stops.forEach(function (el) { stopObserver.observe(el); });
-    }
-  }
-
   /* ---- custom cursor ---- */
   if (!isTouch && !reduced) {
     var dot = document.createElement("div");
@@ -71,10 +50,25 @@
     }
     requestAnimationFrame(loop);
 
-    var hoverables = document.querySelectorAll("a, button, .link-card, .embed-frame");
+    var hoverables = document.querySelectorAll("a, button, .tag-chip, .embed-frame");
     hoverables.forEach(function (el) {
       el.addEventListener("mouseenter", function () { ring.classList.add("is-hover"); });
       el.addEventListener("mouseleave", function () { ring.classList.remove("is-hover"); });
     });
+  }
+
+  /* ---- floating shape parallax ---- */
+  if (!isTouch && !reduced) {
+    var shapes = document.querySelectorAll(".shape-wrap[data-depth]");
+    if (shapes.length) {
+      window.addEventListener("mousemove", function (e) {
+        var cx = window.innerWidth / 2, cy = window.innerHeight / 2;
+        var dx = (e.clientX - cx) / cx, dy = (e.clientY - cy) / cy;
+        shapes.forEach(function (s) {
+          var depth = parseFloat(s.getAttribute("data-depth")) || 10;
+          s.style.transform = "translate(" + (dx * depth) + "px," + (dy * depth) + "px)";
+        });
+      });
+    }
   }
 })();
